@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Simulador COMPRAGRO 31071</title>
+    <meta
+      name="description"
+      content="Simulador didactico para practicar la implementacion municipal de la Ley N° 31071."
+    />
+    <link rel="stylesheet" href="juego.css" />
+  </head>
+  <body>
+    <header class="game-topbar">
+      <a class="brand" href="../index.html" aria-label="Volver a la plataforma municipal">
+        <span class="brand-mark">31071</span>
+        <span>
+          <strong>Simulador COMPRAGRO</strong>
+          <small>Funcionario responsable de implementar la Ley N° 31071</small>
+        </span>
+      </a>
+      <nav class="game-nav" aria-label="Navegacion del simulador">
+        <a href="#campania">Simulacion</a>
+        <a href="#expediente">Expediente</a>
+        <a href="#retos">Auditoria</a>
+        <a href="#final">Informe</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="game-hero" aria-labelledby="game-title">
+        <div class="hero-copy">
+          <p class="eyebrow">Simulacion real de gestion municipal</p>
+          <h1 id="game-title">Eres el funcionario encargado de implementar la Ley N° 31071</h1>
+          <p>
+            La municipalidad te encarga conducir una compra publica de alimentos de la agricultura
+            familiar para un programa social. Deberas coordinar con alcaldia, logistica, presupuesto,
+            desarrollo social, desarrollo economico y productores locales.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#campania">Asumir el encargo</a>
+            <button class="button secondary" id="resetGame" type="button">Reiniciar simulacion</button>
+          </div>
+        </div>
+
+        <aside class="score-panel" aria-label="Expediente de simulacion">
+          <div class="case-file">
+            <span class="case-label">Expediente municipal</span>
+            <strong>Compra de alimentos para programa social</strong>
+            <small>Rol: responsable tecnico de implementacion</small>
+          </div>
+          <div class="day-box">
+            <span>Dia de gestion</span>
+            <strong id="dayValue">1</strong>
+          </div>
+          <div class="score-main">
+            <span id="scoreValue">0</span>
+            <small>puntaje de implementacion</small>
+          </div>
+          <div class="meter">
+            <span>Solidez tecnica</span>
+            <progress id="technicalMeter" value="45" max="100"></progress>
+          </div>
+          <div class="meter">
+            <span>Confianza productora</span>
+            <progress id="trustMeter" value="45" max="100"></progress>
+          </div>
+          <div class="meter">
+            <span>Gestion del tiempo</span>
+            <progress id="timeMeter" value="45" max="100"></progress>
+          </div>
+          <div class="case-note" id="caseNote">
+            Primer encargo: ordenar la ruta antes de hablar de compras con productores.
+          </div>
+        </aside>
+      </section>
+
+      <section class="section mission-section" id="campania" aria-labelledby="campaign-title">
+        <div class="section-heading">
+          <p class="eyebrow">Mesa de trabajo del funcionario</p>
+          <h2 id="campaign-title">Simulacion de implementacion paso a paso</h2>
+          <p>
+            Cada caso representa una situacion que puede ocurrir en una municipalidad. Toma una
+            decision, revisa sus consecuencias y avanza con el expediente.
+          </p>
+        </div>
+
+        <div class="campaign-layout">
+          <ol class="mission-map" id="missionMap" aria-label="Mapa de casos"></ol>
+          <article class="mission-card" id="missionCard" aria-live="polite"></article>
+        </div>
+      </section>
+
+      <section class="section dossier-section" id="expediente" aria-labelledby="dossier-title">
+        <div class="section-heading">
+          <p class="eyebrow">Mesa de partes y archivo</p>
+          <h2 id="dossier-title">Arma el expediente administrativo correcto</h2>
+          <p>
+            Como responsable tecnico, debes saber que documentos sustentan cada decision. Selecciona
+            las piezas del expediente segun la fase del proceso.
+          </p>
+        </div>
+
+        <div class="dossier-game">
+          <article class="phase-target">
+            <span class="pill" id="dossierPhaseBadge">Fase 1</span>
+            <h3 id="dossierPhaseTitle">Conformacion del COMPRAGRO</h3>
+            <p id="dossierInstruction">Elige los documentos necesarios para dejar conformado el comite.</p>
+            <button class="button primary" id="checkDossier" type="button">Verificar expediente</button>
+            <button class="button secondary" id="nextDossier" type="button">Cambiar fase</button>
+            <div class="feedback" id="dossierFeedback"></div>
+          </article>
+          <div class="document-bank" id="documentBank" aria-label="Banco de documentos"></div>
+        </div>
+      </section>
+
+      <section class="section challenge-section" id="retos" aria-labelledby="challenge-title">
+        <div class="section-heading">
+          <p class="eyebrow">Control previo</p>
+          <h2 id="challenge-title">Auditoria rapida antes de continuar</h2>
+          <p>
+            Antes de elevar el expediente, revisa el umbral de compra, errores criticos y condiciones
+            minimas para que los productores puedan participar.
+          </p>
+        </div>
+
+        <div class="challenge-grid">
+          <article class="challenge-card">
+            <h3>Reto 8 UIT</h3>
+            <p>Ingresa el monto estimado y decide si corresponde compra menor o mayor.</p>
+            <label>
+              Monto estimado en soles
+              <input id="amountInput" type="number" min="0" step="100" placeholder="Ej.: 38000" />
+            </label>
+            <div class="choice-row">
+              <button class="button secondary" data-purchase-answer="menor" type="button">Compra menor</button>
+              <button class="button secondary" data-purchase-answer="mayor" type="button">Compra mayor</button>
+            </div>
+            <div class="feedback" id="amountFeedback"></div>
+          </article>
+
+          <article class="challenge-card">
+            <h3>Detector de errores</h3>
+            <p>Marca las practicas que pueden trabar, observar o debilitar el proceso.</p>
+            <div class="error-list" id="errorList"></div>
+            <button class="button primary" id="checkErrors" type="button">Evaluar errores</button>
+            <div class="feedback" id="errorFeedback"></div>
+          </article>
+
+          <article class="challenge-card">
+            <h3>Productor listo</h3>
+            <p>Verifica si la oferta productiva esta lista antes de invitar o registrar participantes.</p>
+            <div class="producer-list" id="producerList"></div>
+            <div class="readiness-bar">
+              <span id="producerReadiness">0%</span>
+              <progress id="producerProgress" value="0" max="100"></progress>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section final-section" id="final" aria-labelledby="final-title">
+        <div>
+          <p class="eyebrow">Cierre de simulacion</p>
+          <h2 id="final-title">Informe de desempeno del funcionario</h2>
+          <p>
+            El tablero resume como quedo tu implementacion: respaldo tecnico, confianza de productores
+            y manejo de tiempos. Usalo para reforzar los puntos debiles.
+          </p>
+        </div>
+        <article class="final-card">
+          <div class="rank" id="rankLabel">Funcionario en entrenamiento</div>
+          <p id="finalMessage">Completa la simulacion para recibir recomendaciones de mejora.</p>
+          <h3>Bitacora de decisiones</h3>
+          <ul id="decisionLog"></ul>
+          <h3>Recomendaciones</h3>
+          <ul id="recommendations"></ul>
+        </article>
+      </section>
+    </main>
+
+    <script src="juego.js"></script>
+  </body>
+</html>

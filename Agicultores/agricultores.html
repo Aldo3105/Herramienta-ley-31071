@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Portal agricultor Ley N° 31071</title>
+    <meta
+      name="description"
+      content="Plataforma didáctica para que agricultores familiares se preparen y participen en compras públicas de alimentos bajo la Ley N° 31071."
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="../index.html" aria-label="Ir a la ruta municipal">
+        <span class="brand-mark" aria-hidden="true">AF</span>
+        <span>
+          <strong>Portal Agricultor</strong>
+          <small>Ley N° 31071</small>
+        </span>
+      </a>
+      <nav class="nav" aria-label="Secciones principales">
+        <a href="../index.html">Municipalidades</a>
+        <a href="../Juego31071/juego.html">Juego</a>
+        <a href="#ruta-productor">Ruta</a>
+        <a href="#preparacion">Requisitos</a>
+        <a href="#asistente-productor">Asistente</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="farmer-hero" id="inicio-agricultor" aria-labelledby="farmer-title">
+        <div class="farmer-hero-copy">
+          <p class="eyebrow">Agricultura familiar y compras públicas</p>
+          <h1 id="farmer-title">Prepárate para vender alimentos al Estado</h1>
+          <p>
+            Una ruta práctica para productores, asociaciones y cooperativas que quieren participar en
+            compras municipales de alimentos bajo la Ley N° 31071.
+          </p>
+          <div class="hero-actions" aria-label="Acciones principales">
+            <a class="button primary" href="#preparacion">Revisar mis requisitos</a>
+            <a class="button secondary" href="#propuesta">Armar propuesta</a>
+          </div>
+        </div>
+        <aside class="farmer-status" aria-labelledby="status-title">
+          <h2 id="status-title">Mi preparación</h2>
+          <div class="progress-ring" aria-hidden="true">
+            <span id="readinessScore">0%</span>
+          </div>
+          <p id="readinessMessage">Marca tus avances para ver tu siguiente paso.</p>
+        </aside>
+      </section>
+
+      <section class="section farmer-dashboard" id="preparacion" aria-labelledby="prep-title">
+        <div class="section-heading">
+          <p class="eyebrow">Diagnóstico rápido</p>
+          <h2 id="prep-title">Qué necesito tener listo</h2>
+          <p>
+            Elige tu forma de participación y el tipo de alimento para ver una lista orientadora de
+            requisitos.
+          </p>
+        </div>
+
+        <div class="farmer-grid">
+          <article class="tool-panel">
+            <h3>Perfil del postor</h3>
+            <div class="segmented" id="profileOptions" aria-label="Perfil del postor"></div>
+            <h3>Tipo de alimento</h3>
+            <div class="segmented" id="productOptions" aria-label="Tipo de alimento"></div>
+            <h3>Tipo de compra</h3>
+            <div class="segmented" id="purchaseOptions" aria-label="Tipo de compra"></div>
+          </article>
+
+          <article class="tool-panel result-panel">
+            <div class="result-heading">
+              <span class="pill" id="scenarioBadge">Productor individual</span>
+              <h3 id="scenarioTitle">Lista de preparación</h3>
+            </div>
+            <ul class="requirement-list" id="requirementList"></ul>
+          </article>
+
+          <article class="tool-panel checklist-panel">
+            <h3>Mi avance</h3>
+            <div class="checklist" id="readinessChecklist"></div>
+            <div class="next-step" id="nextStep"></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section route-section" id="ruta-productor" aria-labelledby="producer-route-title">
+        <div class="section-heading">
+          <p class="eyebrow">Ruta del productor</p>
+          <h2 id="producer-route-title">De la chacra a la buena pro</h2>
+          <p>
+            Cada paso muestra qué debe preparar el productor y qué debe cuidar antes de presentar su
+            propuesta.
+          </p>
+        </div>
+        <div class="producer-route" id="producerRoute"></div>
+      </section>
+
+      <section class="section split-section" id="propuesta" aria-labelledby="proposal-title">
+        <div>
+          <p class="eyebrow">Borrador orientador</p>
+          <h2 id="proposal-title">Arma tu propuesta básica</h2>
+          <p>
+            Completa los datos principales para generar un resumen que puedes revisar con tu asociación,
+            cooperativa o equipo técnico antes de presentarlo formalmente.
+          </p>
+        </div>
+        <form class="proposal-builder" id="proposalForm">
+          <label>
+            Producto
+            <input id="proposalProduct" type="text" placeholder="Ej.: arroz pilado, mandarina, plátano" />
+          </label>
+          <label>
+            Cantidad disponible
+            <input id="proposalQuantity" type="text" placeholder="Ej.: 2,000 kg por mes" />
+          </label>
+          <label>
+            Lugar de producción
+            <input id="proposalPlace" type="text" placeholder="Ej.: distrito, provincia, región" />
+          </label>
+          <label>
+            Precio referencial
+            <input id="proposalPrice" type="text" placeholder="Ej.: S/ 3.20 por kg" />
+          </label>
+          <label>
+            Condiciones de entrega
+            <input id="proposalDelivery" type="text" placeholder="Ej.: entregas semanales en almacén municipal" />
+          </label>
+          <button class="button primary" type="submit">Generar resumen</button>
+          <output class="proposal-output" id="proposalOutput"></output>
+        </form>
+      </section>
+
+      <section class="section assistant-section" id="asistente-productor" aria-labelledby="farmer-assistant-title">
+        <div class="assistant-copy">
+          <p class="eyebrow">Orientación para productores</p>
+          <h2 id="farmer-assistant-title">Preguntas frecuentes</h2>
+          <p>
+            Respuestas rápidas sobre requisitos, convocatoria, propuesta, precio, RNP, conformidad y pago.
+          </p>
+          <div class="quick-prompts" id="farmerPrompts" aria-label="Consultas rápidas"></div>
+        </div>
+
+        <section class="chat-shell" aria-label="Asistente para agricultores">
+          <div class="chat-messages" id="farmerChatMessages" aria-live="polite"></div>
+          <form class="chat-form" id="farmerChatForm">
+            <label class="visually-hidden" for="farmerChatInput">Escribe tu pregunta</label>
+            <input
+              id="farmerChatInput"
+              type="text"
+              autocomplete="off"
+              placeholder="Ej.: ¿necesito RNP para vender?"
+            />
+            <button class="button primary" type="submit">Enviar</button>
+          </form>
+        </section>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>
+        Esta plataforma es orientadora. Revisa siempre las bases de cada convocatoria y consulta con el
+        COMPRAGRO o área responsable de la municipalidad.
+      </p>
+    </footer>
+
+    <script src="agricultores.js"></script>
+  </body>
+</html>

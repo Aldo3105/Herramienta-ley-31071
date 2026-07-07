@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Ruta de implementación de la Ley N° 31071</title>
+    <meta
+      name="description"
+      content="Guía interactiva para que gobiernos locales implementen compras públicas de alimentos de la agricultura familiar bajo la Ley N° 31071."
+    />
+    <link rel="stylesheet" href="Agicultores/styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="#inicio" aria-label="Ir al inicio">
+        <span class="brand-mark" aria-hidden="true">31071</span>
+        <span>
+          <strong>Ruta Ley N° 31071</strong>
+          <small>Compras públicas a la agricultura familiar</small>
+        </span>
+      </a>
+      <nav class="nav" aria-label="Secciones principales">
+        <a href="#ruta">Ruta</a>
+        <a href="#documentos">Documentos</a>
+        <a href="#asistente">Asistente</a>
+        <a href="#asistencia">Asistencia</a>
+        <a href="Agicultores/agricultores.html">Agricultores</a>
+        <a href="Juego31071/juego.html">Simulador</a>
+      </nav>
+    </header>
+
+    <main id="inicio">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow">Guía pública para gobiernos locales</p>
+          <h1 id="hero-title">Ruta de los gobiernos locales para implementar la Ley N° 31071</h1>
+          <p class="value-prop">
+            Conozca la ruta paso a paso para implementar compras públicas de alimentos de la agricultura
+            familiar. Use la ruta interactiva para revisar fases, responsables y documentos, y utilice
+            el asistente documentario para resolver dudas operativas del proceso.
+          </p>
+          <div class="hero-actions" aria-label="Acciones principales">
+            <a class="button primary" href="#ruta">Ruta paso a paso</a>
+            <a class="button secondary" href="#asistente">Consultar al asistente</a>
+            <a class="button secondary" href="#asistencia">Solicitar asistencia</a>
+            <a class="button secondary" href="Juego31071/juego.html">Simulador</a>
+          </div>
+        </div>
+        <aside class="hero-panel" aria-label="Resumen de implementación">
+          <div>
+            <span class="metric">6</span>
+            <span>fases operativas</span>
+          </div>
+          <div>
+            <span class="metric">2-3</span>
+            <span>meses de ruta operativa</span>
+          </div>
+          <div>
+            <span class="metric">8 UIT</span>
+            <span>umbral de compra menor vigente para 2026</span>
+          </div>
+        </aside>
+      </section>
+
+      <section class="section route-section" id="ruta" aria-labelledby="route-title">
+        <div class="section-heading">
+          <p class="eyebrow">Implementación paso a paso</p>
+          <h2 id="route-title">Ruta interactiva</h2>
+          <p>
+            Responsables, acciones, alertas, consejos y documentos vinculados para cada fase del proceso.
+            Los plazos son referenciales y deben adaptarse al contexto municipal.
+          </p>
+        </div>
+
+        <div class="route-layout">
+          <div class="phase-list" id="phaseList" aria-label="Fases de implementación"></div>
+          <article class="detail-panel" id="phaseDetail" aria-live="polite"></article>
+        </div>
+      </section>
+
+      <section class="section split-section" aria-labelledby="decision-title">
+        <div>
+          <p class="eyebrow">Definición clave</p>
+          <h2 id="decision-title">Compra menor o compra mayor</h2>
+          <p>
+            El monto estimado determina el procedimiento. Para el año fiscal 2026, 8 UIT equivalen a
+            S/ 44,000. La municipalidad debe definir el procedimiento según el monto estimado y el
+            sustento técnico del requerimiento.
+          </p>
+        </div>
+        <div class="comparison" role="list" aria-label="Comparación por tipo de compra">
+          <article role="listitem">
+            <h3>Compra menor</h3>
+            <p class="amount">≤ 8 UIT</p>
+            <p>Proceso simplificado para montos iguales o menores al umbral vigente.</p>
+          </article>
+          <article role="listitem">
+            <h3>Compra mayor</h3>
+            <p class="amount">&gt; 8 UIT</p>
+            <p>Convocatoria pública, bases estándar, registro, evaluación y buena pro.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section documents-section" id="documentos" aria-labelledby="documents-title">
+        <div class="section-heading">
+          <p class="eyebrow">Biblioteca pública</p>
+          <h2 id="documents-title">Documentos y modelos</h2>
+          <p class="version-note">
+            Recursos base para adaptar a cada municipalidad: guías, modelos, normativa y materiales de difusión.
+          </p>
+        </div>
+        <div class="resource-toolbar">
+          <label class="searchbox" for="resourceSearch">
+            <span aria-hidden="true">⌕</span>
+            <input id="resourceSearch" type="search" placeholder="Buscar documento" autocomplete="off" />
+          </label>
+          <a class="button secondary" href="https://drive.google.com/drive/folders/1PrEvG3Scs8wERIrzp1V8SSp5vGJaC6km?usp=sharing" target="_blank" rel="noreferrer">Abrir Drive</a>
+        </div>
+        <div class="resource-filters" id="resourceFilters" aria-label="Filtros de documentos"></div>
+        <div class="resource-grid" id="resourceGrid"></div>
+        <div class="resource-actions">
+          <button class="button secondary" id="toggleResourceLimit" type="button">Ver biblioteca completa</button>
+        </div>
+      </section>
+
+      <section class="section assistant-section" id="asistente" aria-labelledby="assistant-title">
+        <div class="assistant-copy">
+          <p class="eyebrow">Asistente documental</p>
+          <h2 id="assistant-title">Consultas frecuentes y modelos</h2>
+          <p>
+            Orienta sobre fases, documentos, errores frecuentes y modelos. No reemplaza la revisión legal
+            ni técnica de la municipalidad; para seguimiento, use el formulario de asistencia.
+          </p>
+          <div class="quick-prompts" id="quickPrompts" aria-label="Consultas rápidas"></div>
+        </div>
+
+        <section class="chat-shell" aria-label="Chat documental">
+          <div class="chat-messages" id="chatMessages" aria-live="polite"></div>
+          <form class="chat-form" id="chatForm">
+            <label class="visually-hidden" for="chatInput">Escribe tu pregunta</label>
+            <input
+              id="chatInput"
+              type="text"
+              autocomplete="off"
+              placeholder="Ej.: necesito un modelo de requerimiento"
+            />
+            <button class="button primary" type="submit">Enviar</button>
+          </form>
+        </section>
+      </section>
+
+      <section class="section assistance-section" id="asistencia" aria-labelledby="assistance-title">
+        <div class="section-heading">
+          <p class="eyebrow">Medición y asistencia técnica</p>
+          <h2 id="assistance-title">Registro de municipalidades interesadas</h2>
+          <p>
+            Complete este formulario para identificar en qué fase se encuentra su municipalidad y recibir
+            asistencia técnica. La información no se mostrará en la página pública; debe enviarse a un
+            servidor privado para que solo el responsable de la herramienta pueda revisarla.
+          </p>
+        </div>
+
+        <div class="assistance-layout">
+          <form class="assistance-form" id="assistanceForm">
+            <label>
+              Nombre y apellido
+              <input name="nombre" required autocomplete="name" />
+            </label>
+            <label>
+              Cargo
+              <input name="cargo" required placeholder="Ej.: Gerente municipal, responsable técnico" />
+            </label>
+            <label>
+              Municipalidad
+              <input name="municipalidad" required placeholder="Ej.: Municipalidad Distrital de..." />
+            </label>
+            <label>
+              Provincia y región
+              <input name="territorio" required placeholder="Ej.: Sechura, Piura" />
+            </label>
+            <label>
+              Correo institucional
+              <input name="correo" type="email" required autocomplete="email" />
+            </label>
+            <label>
+              Teléfono
+              <input name="telefono" type="tel" autocomplete="tel" />
+            </label>
+            <label>
+              Fase en la que se encuentra
+              <select name="fase" required>
+                <option value="">Seleccione una fase</option>
+                <option>Fase previa - fortalecimiento</option>
+                <option>Fase 0 - decisión política</option>
+                <option>Fase 1 - COMPRAGRO</option>
+                <option>Fase 2 - planificación</option>
+                <option>Fase 3 - requerimiento y precio</option>
+                <option>Fase 4A - compra menor</option>
+                <option>Fase 4B - compra mayor</option>
+                <option>Fase 5 - ejecución y pago</option>
+                <option>Fase 6 - reporte semestral</option>
+              </select>
+            </label>
+            <label>
+              Necesidad de asistencia
+              <textarea name="necesidad" rows="4" placeholder="Describa brevemente el cuello de botella o consulta"></textarea>
+            </label>
+            <button class="button primary" type="submit">Registrar solicitud</button>
+            <p class="form-note" id="formStatus" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-logos" aria-label="Instituciones y aliados">
+        <img class="footer-logo-midagri" src="assets/midagri-logo-cropped.png" alt="Ministerio de Desarrollo Agrario y Riego" />
+        <img class="footer-logo-project" src="assets/trinomio-sechura-mesa-cropped.png" alt="Compartiendo la Mesa, WFP y FOSPIBAY" />
+      </div>
+      <div class="footer-grid">
+        <div>
+          <strong>Base legal</strong>
+          <a href="https://busquedas.elperuano.pe/normaslegales/ley-de-compras-estatales-de-alimentos-de-origen-en-la-agricul-ley-n-31071-1888895-1/" target="_blank" rel="noreferrer">Ley N° 31071</a>
+          <a href="https://drive.google.com/file/d/1rUw5Oj0KTNcyOAY5EFus3M8TxTuuoGmI/view?usp=sharing" target="_blank" rel="noreferrer">Reglamento D.S. N° 012-2021-MIDAGRI</a>
+        </div>
+        <div>
+          <strong>Proyecto y aliados</strong>
+          <span>Herramienta elaborada en el marco de Compartiendo la Mesa - Desde las manos de Sechura.</span>
+          <span>Implementado por WFP/Programa Mundial de Alimentos, en alianza con FOSPIBAY, con referencia técnica MIDAGRI.</span>
+        </div>
+        <div>
+          <strong>Contacto</strong>
+          <span>Ing. Edson Seopa Ruiz</span>
+          <a href="mailto:eseopa@midagri.gob.pe">eseopa@midagri.gob.pe</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>
