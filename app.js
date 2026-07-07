@@ -7,7 +7,7 @@ const uit2026 = {
 };
 
 const libraryReviewedAt = "4 de julio de 2026";
-const assistanceEndpoint = "https://docs.google.com/spreadsheets/d/1oTEStAnbTAOVkOCb5ZhWTUqWG4bKXxrlpL2zAmk06UY/edit?usp=sharing";
+const assistanceEndpoint = "https://script.google.com/macros/s/AKfycbzhTOU6mDlsMLknOplsYviBFz1lJFn6lR-vWhgveITxle2j1JaZaR1ahcYCz6NHQjuO/exec";
 
 const resources = [
   {
